@@ -12,7 +12,7 @@ spec:
   project: default
   destination:
     name: in-cluster
-    namespace: qa
+    namespace: app3-qa
   source:
     path: test/app3
     repoURL: https://github.com/andrii-codefresh/promotion-flow-apps-examples.git
