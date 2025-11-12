@@ -17,6 +17,7 @@ gitops-runtime:
           - andrii-prom-test-1-runtime.rnd-sandbox.cf-infra.com
         protocol: https
       name: runtime-test-1
+      isConfigurationRuntime: true
   installer:
     image:
       repository: quay.io/codefresh/dev/gitops-runtime-installer
