@@ -1,0 +1,23 @@
+gitops-runtime:
+  app-proxy:
+    env:
+      HELM_REPOSITORY: oci://quay.io/codefresh/dev/gitops-runtime
+  global:
+    codefresh:
+      accountId: 6913a63a702b052bb6b2eb29
+      userToken:
+        secretKeyRef:
+          name: codefresh-user-token
+          key: token
+    runtime:
+      ingress:
+        className: nginx-internal
+        enabled: true
+        hosts:
+          - andrii-prom-test-3-runtime.rnd-sandbox.cf-infra.com
+        protocol: https
+      name: runtime-test-3
+  installer:
+    image:
+      repository: quay.io/codefresh/dev/gitops-runtime-installer
+    skipValidation: true
