@@ -18,7 +18,5 @@ gitops-runtime:
         protocol: https
       name: runtime-test-2
   installer:
-    image:
-      repository: quay.io/codefresh/dev/gitops-runtime-installer
-    skipUsageValidation: false
+    skipUsageValidation: true
     skipValidation: true

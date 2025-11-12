@@ -19,6 +19,5 @@ gitops-runtime:
       name: runtime-test-3
       isConfigurationRuntime: true
   installer:
-    image:
-      repository: quay.io/codefresh/dev/gitops-runtime-installer
+    skipUsageValidation: true
     skipValidation: true
