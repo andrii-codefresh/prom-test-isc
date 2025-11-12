@@ -15,7 +15,7 @@ spec:
   source:
     directory:
       include: >-
-        {all-runtimes-all-clusters/**/*.yaml,all-runtimes-all-clusters/*.yaml,control-planes/**/*.yaml,control-planes/*.yaml,runtime-test-2/default-git-source.yaml,runtimes/runtime-test-2/**/*.yaml,runtimes/runtime-test-2/*.yaml}
+        {all-runtimes-all-clusters/**/*.yaml,all-runtimes-all-clusters/*.yaml,control-planes/**/*.yaml,control-planes/*.yaml,runtime-test-2/cf-gitops-runtime.yaml,runtime-test-2/default-git-source.yaml,runtimes/runtime-test-2/**/*.yaml,runtimes/runtime-test-2/*.yaml}
       recurse: true
     path: resources
     repoURL: https://github.com/andrii-codefresh/prom-test-isc.git
