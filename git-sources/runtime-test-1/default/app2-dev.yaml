@@ -6,6 +6,8 @@ metadata:
     - resources-finalizer.argocd.argoproj.io/foreground
   labels:
     abac: users
+  annotations:
+    codefresh.io/product: product-beta
 spec:
   project: default
   destination:
