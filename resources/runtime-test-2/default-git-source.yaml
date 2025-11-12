@@ -10,7 +10,7 @@ spec:
   sources:
     - repoURL: https://github.com/andrii-codefresh/prom-test-isc.git
       path: git-sources/runtime-test-2/default
-      targetRevision: HEAD
+      targetRevision: main
       directory:
         include: '*'
         exclude: ''
