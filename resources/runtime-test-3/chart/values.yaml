@@ -17,7 +17,7 @@ gitops-runtime:
           - andrii-prom-test-3-runtime.rnd-sandbox.cf-infra.com
         protocol: https
       name: runtime-test-3
-      isConfigurationRuntime: true
+      isConfigurationRuntime: false
   installer:
     skipUsageValidation: true
     skipValidation: true
