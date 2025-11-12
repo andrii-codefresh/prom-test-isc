@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app1-prod
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io/foreground
+  labels:
+    abac: users
+  annotations:
+    codefresh.io/product: product-alpha
+spec:
+  project: default
+  destination:
+    name: in-cluster
+    namespace: app1-prod
+  source:
+    path: prod/app1
+    repoURL: https://github.com/andrii-codefresh/promotion-flow-apps-examples.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
+      allowEmpty: false
+    syncOptions:
+      - PrunePropagationPolicy=foreground
+      - Replace=false
+      - PruneLast=false
+      - Validate=true
+      - CreateNamespace=true
+      - ApplyOutOfSyncOnly=false
+      - ServerSideApply=true
+      - RespectIgnoreDifferences=false
