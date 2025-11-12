@@ -1,5 +1,6 @@
 metadata:
   name: app3-dev
+  namespace: runtime-test-1
   finalizers:
     - resources-finalizer.argocd.argoproj.io/foreground
   labels:
