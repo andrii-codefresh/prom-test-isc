@@ -22,4 +22,4 @@ spec:
       templates/deployment.yaml:
         jsonPaths:
           - $.*.*.label
-  concurrency: queue
+  concurrency: terminate
