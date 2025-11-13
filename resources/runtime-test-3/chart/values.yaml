@@ -21,3 +21,11 @@ gitops-runtime:
   installer:
     skipUsageValidation: true
     skipValidation: true
+argo-workflows:
+  controller:
+    workflowDefaults:
+      spec:
+        artifactRepositoryRef:
+          configMap: codefresh-workflows-log-store
+          key: codefresh-workflows-log-store
+        archiveLogs: true
