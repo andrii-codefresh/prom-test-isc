@@ -1,7 +1,7 @@
 apiVersion: codefresh.io/v1beta2
 kind: Product
 metadata:
-  name: product-alpha
+  name: product-beta
 spec:
   promotionFlows:
     - name: full
