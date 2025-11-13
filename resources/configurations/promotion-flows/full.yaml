@@ -12,13 +12,17 @@ spec:
         - dev
       policy:
         action: commit
+        preAction: delay
     - environment: staging
       dependsOn:
         - qa
       policy:
         action: commit
+        preAction: delay
     - environment: prod
       dependsOn:
         - staging
       policy:
         action: pr
+        preAction: delay
+  postTrigger: delay
