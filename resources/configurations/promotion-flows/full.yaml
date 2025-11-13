@@ -18,7 +18,7 @@ spec:
         - qa
       policy:
         action: commit
-        preAction: delay
+        preAction: long
     - environment: prod
       dependsOn:
         - staging
