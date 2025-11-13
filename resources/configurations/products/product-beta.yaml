@@ -1,0 +1,25 @@
+apiVersion: codefresh.io/v1beta2
+kind: Product
+metadata:
+  name: product-beta
+spec:
+  promotionFlows:
+    - name: full
+      gitTriggerSelectors:
+        - key: commitMessage
+          operator: In
+          values:
+            - '*promotion*'
+  promotionTemplate:
+    versionSource:
+      file: Chart.yaml
+      jsonPath: $.appVersion
+    promotion:
+      Chart.yaml:
+        jsonPaths:
+          - $.appVersion
+          - $.version
+      templates/deployment.yaml:
+        jsonPaths:
+          - $.*.*.label
+  concurrency: queue
