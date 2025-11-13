@@ -25,4 +25,3 @@ spec:
       policy:
         action: pr
         preAction: delay
-  postTrigger: delay
