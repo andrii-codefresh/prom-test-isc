@@ -23,5 +23,5 @@ spec:
       dependsOn:
         - staging
       policy:
-        action: pr
+        action: commit
         preAction: delay
