@@ -18,4 +18,8 @@ spec:
       Chart.yaml:
         jsonPaths:
           - $.appVersion
+          - $.version
+      templates/deployment.yaml:
+        jsonPaths:
+          - $.*.*.label
   concurrency: queue
