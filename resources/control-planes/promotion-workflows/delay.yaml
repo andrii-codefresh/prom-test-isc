@@ -20,4 +20,4 @@ spec:
         image: alpine
         command: [sh]
         source: |
-          pause 10
+          sleep 10
